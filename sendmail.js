@@ -11,18 +11,84 @@ let dataUri = `data:image/jpeg;base64,${imageContent}`;
 // console.log(dataUri);
 
 let htmlContent = `
-    <h6>Hello!</h6>
-    <p>This is a test email sent from Node.js using Nodemailer with HTML content and an embedded image.</p>
-    <button>Click Me</button>
-`;
+<html>
 
-const canvas = createCanvas(200, 200); // Set canvas dimensions
-const ctx = canvas.getContext('2d');
-ctx.fillStyle = 'lightblue';
-ctx.fillRect(0, 0, canvas.width, canvas.height);
-ctx.font = '30px Arial';
-ctx.fillStyle = 'black';
-ctx.fillText('Hello Canvas!', 50, 100);
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Festival</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #282c35;
+            color: #c8c8c8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            background-color: #3e3e3e;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            color: #61dafb;
+            margin-bottom: 20px;
+        }
+
+        .fest-content {
+            margin-top: 20px;
+        }
+
+        .fest-content p {
+            margin-bottom: 15px;
+        }
+
+        .fest-content a {
+            color: #4caf50;
+            text-decoration: underline;
+        }
+
+        .highlight {
+            color: #f8c32b;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Tech Festival 2023</h1>
+        <div class="fest-content">
+            <p>Welcome to Tech Festival 2023, where <span class="highlight">innovation</span> meets <span
+                    class="highlight">excitement</span>! Join us for a thrilling journey into the world of technology.</p>
+            <p>Event Highlights:</p>
+            <ul>
+                <li>Keynote speakers from tech giants</li>
+                <li>Hands-on workshops and coding challenges</li>
+                <li>Panel discussions on the future of technology</li>
+                <li>Networking opportunities with industry experts</li>
+            </ul>
+            <p>Event Date: <span class="highlight">November 10-12, 2023</span></p>
+            <p>Location: <span class="highlight">[Your Venue]</span></p>
+            <p>For more information, visit our <a href="https://github.com/your-tech-festival">GitHub Repository</a>.
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
+  `;
 
 // Rest of your email sending code...
 
@@ -52,7 +118,7 @@ console.log(emailData)
 async function sendEmails() {
     for (let index = 0; index < emailData.length; index++) {
         const row = emailData[index];
-        console.log("row",row.email);
+        console.log("row", row.email);
         let mailOptions = {
             from: 'avinashshrivastavaofficial@gmail.com',
             to: row.email,

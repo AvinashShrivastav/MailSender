@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Example</title>
+    <style>
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center; /* Center align the content inside the div */
+        }
+
+        .container1 button {
+            background-color: #90C4F2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body style="background-image: url(https://i.ibb.co/kQ0B2yH/back.png);">
+    <div class="container">
+        <img src="https://i.ibb.co/42kHcQK/2000-x-248-2.png" alt="Responsive Image">
+    </div>
+    <div class="container" style="background-color: black;">
+        <img src="https://i.ibb.co/khWxFGG/1.png" alt="Responsive Image">
+        <div class="container1">
+            <button onclick="register()">Register Now</button>
+        </div>
+    </div>
+    <script>
+     function register() {
+        window.location.href = "https://hackcbs.tech";
+     }
+    </script>
+</body>
+
+</html>
