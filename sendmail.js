@@ -142,7 +142,7 @@ let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user: 'hackcbs@gmail.com',
-        pass: 'wcew zrjr ofqi yqwi' // Use the generated App Password here
+        pass: 'Your App Password Here' // Use the generated App Password here
     }
 });
 // C:\Users\hp\Desktop\mail\email-sender\sendmail.js
